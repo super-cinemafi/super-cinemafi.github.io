@@ -1,0 +1,56 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: black;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+#app {
+    display: flex;
+    height: 100vh;
+    text-align: left;
+    color: white;
+    background-color: rgba(53, 41, 52, 0.235);
+}
+
+#the-sidebar {
+    width: 20%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.dashboard-item {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-color: black;
+    border-style: solid;
+}
+
+.dashboard-header {
+    font-size: 24px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;

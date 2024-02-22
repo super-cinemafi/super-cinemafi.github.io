@@ -4,100 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cinema Dashboard</title>
-        <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            color: black;
-            font-family: Avenir, Helvetica, Arial, sans-serif;
-        }
-
-        #app {
-            display: flex;
-            height: 100vh;
-            text-align: left;
-            color: white;  
-            background-color: rgba(53, 41, 52, 0.235);
-        }
-
-        #the-sidebar {
-            width: 20%;
-            background-color:white;
-            color: black;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: center;
-        }
-
-        .content {
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            overflow-y: auto;
-        }
-
-        .logo {
-            max-width: 100px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        /* Additional styling for clean look */
-        .dashboard-item {
-            background-color: #ecf0f1;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-color: black;
-            border-style: solid;
-        }
-
-        .dashboard-header {
-            font-size: 24px;
-            background-color: black;
-            color: rgb(255, 255, 255);
-            margin-bottom: 10px;
-            border-radius: 2px;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .quest-progress {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            padding: 10px 0;
-        }
-
-        .quest-badges {
-            display: flex;
-            gap: 10px; /* Adjust the space between badges */
-        }
-
-        .badge {
-            display: inline-block;
-            width: 40px; /* Badge size */
-            height: 40px; /* Badge size */
-            line-height: 40px; /* Center the icon vertically */
-            text-align: center;
-            border-radius: 50%; /* Circular badges */
-            background-color: #0084ff20; /* Updated to have the same tint */
-            color: white;
-            border-style: solid;
-            border-color: black;
-            font-size: 20px; /* Icon size */
-        }
-
-        p {
-            color: black;
-        }
-
-        /* Removed custom styles for different badge states to maintain uniform tint */
-    </style>
+        <link rel="stylesheet" href="cinema-foundational.css">
     </head>
     <body>
         <div id="app">
@@ -105,6 +12,12 @@
                 <img alt="Vue logo" src="B_cinemaFI.png" class="logo">
                 Sidebar Content
                 <!-- Add more sidebar content here -->
+                <ul class="sidebar-links">
+                    <li><a href="#user-dashboard"
+                            id="browse-link">Browse</a></li>
+                    <li><a href="#dynamic-content"
+                            id="status-link">Status</a></li>
+                </ul>
             </div>
             <div class="content">
                 <div class="dashboard-item" id="user-dashboard">
@@ -134,5 +47,23 @@
                 <!-- Add more content sections as needed -->
             </div>
         </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userDashboard = document.getElementById('user-dashboard');
+            const dynamicContent = document.getElementById('dynamic-content');
+
+            document.getElementById('browse-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                userDashboard.style.display = 'block';
+                dynamicContent.style.display = 'none';
+            });
+
+            document.getElementById('status-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                userDashboard.style.display = 'none';
+                dynamicContent.style.display = 'block';
+            });
+        });
+    </script>
     </body>
 </html>
