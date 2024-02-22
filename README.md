@@ -21,11 +21,11 @@
 
 ## Executive Summary
 
-CinemaFi presents a blockchain-based platform that addresses the funding challenges in the indie film industry. By integrating NFT technology with film production, CinemaFi offers an investment opportunity, allowing benefactors to own a part of the movie they fund.
+CinemaFi is a blockchain-based platform that addresses the funding challenges in the indie film industry. By integrating NFT technology with film production, CinemaFi offers an investment opportunity, allowing benefactors to own a part of the movie they fund.
 
 ## Introduction
 
-When it comes to the motion picture market, funding for indie films is underserved. The film industry is worth an estimated $95.45 billion, with indie films accounting for just over 7% of that total amount. There is a lack of funding for these projects, and current solutions for indie film funding is not optimal. Studio films rank at the top of investment charts and sites like Indigo have a stigma that drives investors away. There are very few incentives for people outside of the film industry to fund dynamic projects.
+When it comes to the motion picture market, funding for indie films is underserved. dThere is a lack of funding for these projects, and current solutions for indie film funding are not optimal. There are few incentives for people outside of the film industry to fund dynamic projects.
 
 ## Problem Statement
 
