@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            color: black;
             font-family: Avenir, Helvetica, Arial, sans-serif;
         }
 
@@ -16,13 +17,14 @@
             display: flex;
             height: 100vh;
             text-align: left;
-            color: #2c3e50;
+            color: white;  
+            background-color: rgba(53, 41, 52, 0.235);
         }
 
         #the-sidebar {
             width: 20%;
-            background-color: #34495e;
-            color: #ecf0f1;
+            background-color:white;
+            color: black;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -50,14 +52,51 @@
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: black;
+            border-style: solid;
         }
 
         .dashboard-header {
             font-size: 24px;
-            color: #34495e;
+            background-color: black;
+            color: rgb(255, 255, 255);
             margin-bottom: 10px;
+            border-radius: 2px;
+            text-align: center;
+            padding: 10px;
         }
+
+        .quest-progress {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .quest-badges {
+            display: flex;
+            gap: 10px; /* Adjust the space between badges */
+        }
+
+        .badge {
+            display: inline-block;
+            width: 40px; /* Badge size */
+            height: 40px; /* Badge size */
+            line-height: 40px; /* Center the icon vertically */
+            text-align: center;
+            border-radius: 50%; /* Circular badges */
+            background-color: #0084ff20; /* Updated to have the same tint */
+            color: white;
+            border-style: solid;
+            border-color: black;
+            font-size: 20px; /* Icon size */
+        }
+
+        p {
+            color: black;
+        }
+
+        /* Removed custom styles for different badge states to maintain uniform tint */
     </style>
     </head>
     <body>
@@ -75,8 +114,22 @@
                 </div>
                 <div class="dashboard-item" id="dynamic-content">
                     <div class="dashboard-header">Dynamic Content</div>
-                    Welcome to Your Vue.js App
+                    <p>Welcome to cinemaFi - you are doing great.</p>
                     <!-- Placeholder for dynamic content -->
+                    <div class="quest-progress">
+                        <div class="quest-badges">
+                            <!-- Example badges for demonstration -->
+                            <span class="badge"
+                                title="Quest 1: Started">🔘</span>
+                            <span class="badge"
+                                title="Quest 2: In Progress">🟢</span>
+                            <span class="badge"
+                                title="Quest 3: Completed">🔵</span>
+                            <span class="badge"
+                                title="Quest 4: Locked">🔒</span>
+                            <!-- Add more badges as needed -->
+                        </div>
+                    </div>
                 </div>
                 <!-- Add more content sections as needed -->
             </div>
